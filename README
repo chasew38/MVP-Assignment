@@ -1,1 +1,36 @@
-This doesnt matter
+# 🗑️ TrashCan - Safer Deletes for Linux
+
+**TrashCan** is a simple, safe, and effective CLI recycle bin for Linux. Instead of deleting files permanently, it moves them to a hidden trash directory so you can restore them later or purge them automatically after a few days.
+
+---
+
+## ⚙️ Features
+
+- Move files to a user-level trash (`~/.trashcan`)
+- List trashed files with original paths and timestamps
+- Restore files with a single command
+- Auto-purge old trashed files by age
+
+---
+
+## 🚀 Usage
+
+```bash
+# Move a file to trash
+python3 trashcan.py delete <file>
+
+# List all trashed files
+python3 trashcan.py list
+
+# Restore a trashed file
+python3 trashcan.py restore <trashed_filename>
+
+# Purge files older than 7 days (default)
+python3 trashcan.py purge
+
+# Purge files older than N days
+python3 trashcan.py purge 14
+
+# Show help
+python3 trashcan.py help
+
